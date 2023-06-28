@@ -35,7 +35,7 @@
             top: 18px;
             left: -10px;
         }
-        #header-hamburger:hover::before {
+        #header-hamburger:hover::before { /* header-hamburger의 자식 */
             content: '';
             width: 44px;
             height: 44px;
@@ -44,6 +44,7 @@
             top: 1px;
             background-color: var(--color_option_bg);
             border-radius: 50%;
+            z-index: 0;
         }
         #header-hamburger > div {
             width: 26px;
@@ -52,6 +53,16 @@
             background-repeat: no-repeat;
             background-size: 422px 405px;
             background-position: -335px -284px;
+            z-index: 1;
+            position: relative
+        }
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
         }
         :root {
             --color_title: #080808;
@@ -123,6 +134,7 @@
             <div id="header">
                 <button id="header-hamburger">
                     <div></div>
+                    <span class="blind">확장 영역</span>
                 </button>
             </div>
             <div id="search"></div>
