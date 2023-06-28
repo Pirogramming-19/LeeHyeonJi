@@ -23,16 +23,25 @@
         }
         #header {
             text-align: left;
+            position: relative;
         }
         #header-hamburger {
-            margin-top: 18px;
             padding: 10px;
             display: inline-block;
             background: none;
             border: none;
             cursor: pointer;
+            position: absolute;
+            top: 18px;
+            left: -10px;
         }
-        #header-hamburger:hover {
+        #header-hamburger:hover::before {
+            content: '';
+            width: 44px;
+            height: 44px;
+            position: absolute;
+            left: 1px;
+            top: 1px;
             background-color: var(--color_option_bg);
             border-radius: 50%;
         }
