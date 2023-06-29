@@ -188,6 +188,20 @@
                     height: 100%;
                     padding: 17px 17px 17px 27px;
                     margin-right: 12px;
+                    position: relative;
+                }
+                #search > form > #search-avg::after {
+                    display: none
+                }
+                #search > form:focus-within #search-avg::after {
+                    content: "";
+                    width: 1px;
+                    height: 20px;
+                    background: #e4e4e4;
+                    position: absolute;
+                    right: 0;
+                    top: 20px;
+                    display: inline-block;
                 }
                 #search > form > #search-avg > svg {
                     width: 24px;
