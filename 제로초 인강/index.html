@@ -16,6 +16,10 @@
             line-height: 10.5px;
             font-family: -apple-system, BlinkMacSystemFont, 'Malgun Gothic', '맑은 고딕', helvetica, 'Apple SD Gothic Neo', sans-serif;
         }
+        ul {
+            padding: 0;
+            margin: 0;
+        }
         #wrap {
             text-align: center;
         }
@@ -303,16 +307,21 @@
 
             <style>
                 /* nav 스타일 */
+                #nav {
+                    margin-top: 12px;
+                }
                 #nav > ul {
                     display: flex;
                     list-style: none;
                     justify-content: center;
-                    font-size: 1rem;
+                    font-size: 0.9rem;
                     line-height: 20px;
                 }
                 #nav > ul > li {
                     width: 64px;
                     margin-left: 4px;
+                    display: flex;
+                    justify-content: center;
                 }
                 #nav > ul > li:nth-of-type(1) {
                     margin-left: 0;
@@ -323,13 +332,85 @@
                 #nav > ul > li > a:visited {
                     color: black;
                 }
+                #nav > ul > li > a > div {
+                    margin: 0 auto;
+                    position: relative;
+                    text-align: center;
+                }
+                #nav > ul > li > a > div::after {
+                    content: "";
+                    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.fdc455b9.png);
+                    background-size: 422px 405px;
+                    background-repeat: no-repeat;
+                    width: 44px;
+                    height: 44px;
+                    display: inline-block;
+                    position: relative;
+                    z-index: 1;
+                    margin: 2px;
+                }
+                #nav > ul > li > a > div::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: -2px;
+                    left: -3px;
+                    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.fdc455b9.png);
+                    background-size: 422px 405px;
+                    background-position: 0px -128px;
+                    background-repeat: no-repeat;
+                    width: 54px;
+                    height: 54px;
+                }
+                #nav > ul > li:nth-of-type(1) > a > div::after {
+                    background-position: -250px -90px;
+                }
+                #nav > ul > li:nth-of-type(2) > a > div::after {
+                    background-position: -250px 0px;
+                }
+                #nav > ul > li:nth-of-type(3) > a > div::after {
+                    background-position: -201px -98px;
+                }
+                #nav > ul > li:nth-of-type(4) > a > div::after {
+                    background-position: -90px -209px;
+                }
+                #nav > ul > li:nth-of-type(5) > a > div::after {
+                    background-position: 0px -209px;
+                }
+                #nav > ul > li:nth-of-type(6) > a > div::after {
+                    background-position: -180px -209px;
+                }
+                #nav > ul > li:nth-of-type(7) > a > div::after {
+                    background-position: -45px -209px;
+                }
+                #nav > ul > li:nth-of-type(8) > a > div::after {
+                    background-position: -201px 0px;
+                    width: 48px;
+                    height: 48px;
+                }
+                #nav > ul > li:nth-of-type(9) > a > div::after {
+                    background-position: -225px -209px;
+                }
+                #nav > ul > li:nth-of-type(10) > a > div::after {
+                    background-position: -250px -135px;
+                }
+                #nav > ul > li > a > span {
+                    margin-top: 4px;
+                    display: inline-block;
+                }
+                #nav > ul > li:nth-of-type(8) > a > span {
+                    margin-top: 1px;
+                }
             </style>
 
             <div id="nav">
                 <ul>
                     <li>
                         <a href="">
-                            <div></div>
+                            <div>
+                                <!-- ::after -->
+                                <!-- ::before -->
+                            </div>
                             <span>메일</span>
                         </a>
                     </li>
