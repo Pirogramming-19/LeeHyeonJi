@@ -720,11 +720,10 @@
                         #main-shopping a:hover {
                             text-decoration: underline;
                         }
-                        #main-newstand-grid,
-                        #main-shopping-grid {
+                        #main-newstand-grid {
                             display: grid;
                             height: 224px;
-                            grid-template-rows: repeat(4, 1fr);;
+                            grid-template-rows: repeat(4, 1fr);
                             width: 790px;
                             grid-template-columns: repeat(6, 1fr);
                             justify-content: center;
@@ -734,6 +733,20 @@
                             margin-top: 18px;
                             grid-gap: 1px;
                             background: var(--color_border_in);
+                        }
+                        #main-shopping-grid {
+                            margin-top: 20px;
+                            display: grid;
+                            grid-template-rows: 90px 95px 185px;
+                            grid-template-columns: 1fr 1fr 1fr 1fr 250px;
+                            column-gap: 20px;
+                        }
+                        .item:nth-child(1),
+                        .itemd:nth-child(2),
+                        .item:nth-child(3),
+                        .item:nth-child(4),
+                        .item:nth-child(5) {
+                            grid-row: 1 / span 2;
                         }
                         #main-newstand-grid > div,
                         #main-shopping-grid > div {
@@ -882,30 +895,17 @@
                                 </div>
                             </div>
                             <div id="main-shopping-grid">
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
+                                <div class="item">1</div>
+                                <div class="item">2</div>
+                                <div class="item">3</div>
+                                <div class="item">4</div>
+                                <div class="item">5</div>
+                                <div class="item">6</div>
+                                <div class="item">7</div>
+                                <div class="item">8</div>
+                                <div class="item">9</div>
+                                <div class="item">10</div>
+                                <div class="item">11</div>
                             </div>
                         </div>
                         <footer>
