@@ -12,6 +12,9 @@
         }
         body {
             margin: 0px;
+            font-size: 10.5px;
+            line-height: 10.5px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Malgun Gothic', '맑은 고딕', helvetica, 'Apple SD Gothic Neo', sans-serif;
         }
         #wrap {
             text-align: center;
@@ -149,6 +152,111 @@
             --color_dic: #031f5f;
             --color_dic_rgb: 3,31,95;
         }
+        
+        /* 검색창 */
+        #search > form {
+            width: 710px;
+            height: 62px;
+            border: 1px solid #03c75a;
+            border-radius: 33px;
+            text-align: left;
+            display: inline-flex;
+        }
+        #search > form:hover {
+            box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.12);
+        }
+        #search > form > #search-avg {
+            width: 68px;
+            height: 100%;
+            padding: 17px 17px 17px 27px;
+            margin-right: 12px;
+            position: relative;
+        }
+        #search > form > #search-avg::after {
+            display: none
+        }
+        #search > form:focus-within #search-avg::after {
+            content: "";
+            width: 1px;
+            height: 20px;
+            background: #e4e4e4;
+            position: absolute;
+            right: 0;
+            top: 20px;
+            display: inline-block;
+        }
+        #search > form > #search-avg > svg {
+            width: 24px;
+            height: 24px;
+            fill: #03c75a;
+        }
+        #search > form > #search-input {
+            width: 480px;
+            height: 100%;
+            padding: 17px 0px;
+            border: none;
+            outline: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        #search > form > #search-input::placeholder {
+            color: white;
+        }
+        #search > form > #search-input:focus::placeholder {
+            color: #e4e4e4;
+        }
+        #search-right {
+            flex: 1;
+            display: inline-flex;
+            justify-content: flex-end;
+            align-items: stretch;
+        }
+        #search-keyboard, #search-recent, #search-button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        #search-keyboard::before {
+            content: "";
+            display: block;
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.8d370390.png);
+            background-size: 422px 405px;
+            background-position: -270px -234px;
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 16px;
+        }
+        #search-keyboard:hover::before {
+            filter: brightness(0.7);
+        }
+        #search-recent::before {
+            content: "";
+            display: block;
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.8d370390.png);
+            background-size: 422px 405px;
+            background-position: -412px -339px;
+            background-repeat: no-repeat;
+            width: 10px;
+            height: 6px;
+        }
+        #search-button {
+            padding: 17px 27px 16px 10px;
+        }
+        #search-button > div {
+            background: #03c75a;
+            width: 25px;
+            height: 25px;
+        }
+        #search-button > div::before {
+            content: "";
+            display: block;
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.8d370390.png);
+            background-size: 422px 405px;
+            background-position: -364px -106px;
+            background-repeat: no-repeat;
+            width: 25px;
+            height: 25px;
+        }
     </style>
 </head>
 <body>
@@ -168,115 +276,6 @@
                     <span class="blind">알림</span>
                 </button>
             </div>
-
-
-            <style>
-                /* 검색창 */
-                #search > form {
-                    width: 710px;
-                    height: 62px;
-                    border: 1px solid #03c75a;
-                    border-radius: 33px;
-                    text-align: left;
-                    display: inline-flex;
-                }
-                #search > form:hover {
-                    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.12);
-                }
-                #search > form > #search-avg {
-                    width: 68px;
-                    height: 100%;
-                    padding: 17px 17px 17px 27px;
-                    margin-right: 12px;
-                    position: relative;
-                }
-                #search > form > #search-avg::after {
-                    display: none
-                }
-                #search > form:focus-within #search-avg::after {
-                    content: "";
-                    width: 1px;
-                    height: 20px;
-                    background: #e4e4e4;
-                    position: absolute;
-                    right: 0;
-                    top: 20px;
-                    display: inline-block;
-                }
-                #search > form > #search-avg > svg {
-                    width: 24px;
-                    height: 24px;
-                    fill: #03c75a;
-                }
-                #search > form > #search-input {
-                    width: 480px;
-                    height: 100%;
-                    padding: 17px 0px;
-                    border: none;
-                    outline: none;
-                    font-size: 1.5rem;
-                    font-weight: bold;
-                }
-                #search > form > #search-input::placeholder {
-                    color: white;
-                }
-                #search > form > #search-input:focus::placeholder {
-                    color: #e4e4e4;
-                }
-                #search-right {
-                    flex: 1;
-                    display: inline-flex;
-                    justify-content: flex-end;
-                    align-items: stretch;
-                }
-                #search-keyboard, #search-recent, #search-button {
-                    background: transparent;
-                    border: none;
-                    cursor: pointer;
-                }
-                #search-keyboard::before {
-                    content: "";
-                    display: block;
-                    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.8d370390.png);
-                    background-size: 422px 405px;
-                    background-position: -270px -234px;
-                    background-repeat: no-repeat;
-                    width: 24px;
-                    height: 16px;
-                }
-                #search-keyboard:hover::before {
-                    filter: brightness(0.7);
-                }
-                #search-recent::before {
-                    content: "";
-                    display: block;
-                    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.8d370390.png);
-                    background-size: 422px 405px;
-                    background-position: -412px -339px;
-                    background-repeat: no-repeat;
-                    width: 10px;
-                    height: 6px;
-                }
-                #search-button {
-                    padding: 17px 27px 16px 10px;
-                }
-                #search-button > div {
-                    background: #03c75a;
-                    width: 25px;
-                    height: 25px;
-                }
-                #search-button > div::before {
-                    content: "";
-                    display: block;
-                    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.8d370390.png);
-                    background-size: 422px 405px;
-                    background-position: -364px -106px;
-                    background-repeat: no-repeat;
-                    width: 25px;
-                    height: 25px;
-                }
-            </style>
-
             <div id="search">
                 <form action="" method="">
                     <a href="#" id="search-avg">
@@ -302,7 +301,96 @@
             </div>
 
 
-            <div id="nav"></div>
+            <style>
+                /* nav 스타일 */
+                #nav > ul {
+                    display: flex;
+                    list-style: none;
+                    justify-content: center;
+                    font-size: 1rem;
+                    line-height: 20px;
+                }
+                #nav > ul > li {
+                    width: 64px;
+                    margin-left: 4px;
+                }
+                #nav > ul > li:nth-of-type(1) {
+                    margin-left: 0;
+                }
+                #nav > ul > li > a {
+                    text-decoration: none;
+                }
+                #nav > ul > li > a:visited {
+                    color: black;
+                }
+            </style>
+
+            <div id="nav">
+                <ul>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span>메일</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span>카페</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span>블로그</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span>쇼핑</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span>뉴스</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span>증권</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span>부동산</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span>지도</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span>웹툰</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span class="blind">더보기</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
             <div id="main"></div>
         </div>
     </div>
