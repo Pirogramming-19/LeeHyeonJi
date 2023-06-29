@@ -741,12 +741,40 @@
                             grid-template-columns: 1fr 1fr 1fr 1fr 250px;
                             column-gap: 20px;
                         }
+                        #main-shopping-grid .item {
+                            line-height: 20px;
+                            letter-spacing: -.8px;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        #main-shopping-grid .item > .image {
+                            width: 115px;
+                            height: 115px;
+                            border-radius: 4px;
+                            background-color: gray;
+                            margin-bottom: 10px;
+                        }
                         .item:nth-child(1),
                         .itemd:nth-child(2),
                         .item:nth-child(3),
                         .item:nth-child(4),
                         .item:nth-child(5) {
                             grid-row: 1 / span 2;
+                        }
+                        .item:nth-child(2), 
+                        .item:nth-child(6), 
+                        .item:nth-child(11) > div:first-child {
+                            padding: 10px 12px 5px;
+                            border: 1px solid rgba(245,248,251,.05);
+                            border-radius: 4px;
+                            /* background: rgba(245,248,251,.6); */
+                        }
+                        .item:nth-child(6) {
+                            margin: 11px 0;
+                        }
+                        .item:nth-child(11) > div:first-child {
+                            margin-bottom: 10px;
+                            height: 135px;
                         }
                         #main-newstand-grid > div,
                         #main-shopping-grid > div {
@@ -895,17 +923,48 @@
                                 </div>
                             </div>
                             <div id="main-shopping-grid">
-                                <div class="item">1</div>
-                                <div class="item">2</div>
-                                <div class="item">3</div>
-                                <div class="item">4</div>
-                                <div class="item">5</div>
-                                <div class="item">6</div>
-                                <div class="item">7</div>
-                                <div class="item">8</div>
-                                <div class="item">9</div>
-                                <div class="item">10</div>
-                                <div class="item">11</div>
+                                <div class="item">
+                                    <div class="image"></div>
+                                    <div class="text">독보적인 퀄리티 우린품격을입어요</div>
+                                </div>
+                                <div class="item">
+                                    2
+                                </div>
+                                <div class="item">
+                                    <div class="image"></div>
+                                    <div class="text">독보적인 퀄리티 우린품격을입어요</div>
+                                </div>
+                                <div class="item">
+                                    <div class="image"></div>
+                                    <div class="text">독보적인 퀄리티 우린품격을입어요</div>
+                                </div>
+                                <div class="item">
+                                    <div class="image"></div>
+                                    <div class="text">독보적인 퀄리티 우린품격을입어요</div>
+                                </div>
+                                <div class="item">
+                                    6
+                                </div>
+                                <div class="item">
+                                    <div class="image"></div>
+                                    <div class="text">독보적인 퀄리티 우린품격을입어요</div>
+                                </div>
+                                <div class="item">
+                                    <div class="image"></div>
+                                    <div class="text">독보적인 퀄리티 우린품격을입어요</div>
+                                </div>
+                                <div class="item">
+                                    <div class="image"></div>
+                                    <div class="text">독보적인 퀄리티 우린품격을입어요</div>
+                                </div>
+                                <div class="item">
+                                    <div class="image"></div>
+                                    <div class="text">독보적인 퀄리티 우린품격을입어요</div>
+                                </div>
+                                <div class="item">
+                                    <div></div>
+                                    <div>아울렛 쇼핑 득템찬스!</div>
+                                </div>
                             </div>
                         </div>
                         <footer>
