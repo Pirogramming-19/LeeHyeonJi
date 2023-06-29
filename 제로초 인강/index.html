@@ -178,14 +178,13 @@
                     border: 1px solid #03c75a;
                     border-radius: 33px;
                     text-align: left;
-                    display: inline-block;
+                    display: inline-flex;
                 }
                 #search > form > #search-avg {
                     width: 68px;
                     height: 100%;
                     padding: 17px 17px 17px 27px;
                     margin-right: 12px;
-                    display: inline-block; /**/
                 }
                 #search > form > #search-avg > svg {
                     width: 24px;
@@ -202,7 +201,15 @@
                     font-weight: bold;
                 }
                 #search-right {
-                    display: inline-block;
+                    flex: 1;
+                    display: inline-flex;
+                    justify-content: flex-end;
+                    align-items: stretch;
+                }
+                #search-keyboard, #search-recent, #search-button {
+                    background: transparent;
+                    border: none;
+                    cursor: pointer;
                 }
                 #search-keyboard::before {
                     content: "";
