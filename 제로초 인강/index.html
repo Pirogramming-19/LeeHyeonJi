@@ -581,20 +581,24 @@
 
 
                     <style>
-                        #main-newstand {
+                        #main-newstand, 
+                        #main-shopping {
                             height: 426px;
                             display: flex;
                             flex-flow: column;
                         }
-                        #main-newstand-top {
+                        #main-newstand-top, 
+                        #main-shopping-top {
                             flex: 1;
                             padding: 18px 20px;
                         }
-                        #main-newstand-top .dot, #main-newstand-top .slash {
+                        #main-newstand-top .dot, #main-newstand-top .slash,
+                        #main-shopping-top .dot, #main-shopping-top .slash {
                             color: rgba(8,8,8,.5);
                             font-weight: 800;
                         }
-                        #main-newstand-top .dot::before {
+                        #main-newstand-top .dot::before,
+                        #main-shopping-top .dot::before {
                             content: "";
                             display: inline-block;
                             width: 4px;
@@ -605,11 +609,13 @@
                             border-radius: 50%;
                             vertical-align: 5px;
                         }
-                        #main-newstand-top .slash {
+                        #main-newstand-top .slash,
+                        #main-shopping-top .slash {
                             position: relative;
                             padding-left: 26px;
                         }
-                        #main-newstand-top .slash::before {
+                        #main-newstand-top .slash::before,
+                        #main-shopping-top .slash::before {
                             content: "";
                             display: inline-block;
                             position: absolute;
@@ -621,7 +627,8 @@
                             background-color: var(--color_dot_divider);
                             transform: skewX(-15deg);
                         }
-                        #main-newstand header {
+                        #main-newstand header,
+                        #main-shopping header {
                             font-size: 1rem;
                             color: rgba(8, 8, 8, .5);
                             display: flex;
@@ -629,7 +636,8 @@
                             line-height: 23px;
                             margin-bottom: 17px;
                         }
-                        #main-newstand-gray {
+                        #main-newstand-gray,
+                        #main-shopping-gray {
                             display: flex;
                             justify-content: flex-start;
                             height: 50px;
@@ -639,14 +647,17 @@
                             font-size: 0.8rem;
                             line-height: 26px;
                         }
-                        #main-newstand-gray .left {
+                        #main-newstand-gray .left,
+                        #main-shopping-gray .left {
                             flex: 1;
                             display: flex;
                         }
-                        #main-newstand-gray .left >  a:first-of-type {
+                        #main-newstand-gray .left >  a:first-of-type,
+                        #main-shopping-gray .left >  a:first-of-type {
                             width: 85.5px;
                         }
-                        #main-newstand-gray .left a:first-of-type {
+                        #main-newstand-gray .left a:first-of-type,
+                        #main-shopping-gray .left a:first-of-type {
                             content: "";
                             background: url('./sp_main.png');
                             background-size: 422px 405px;
@@ -657,11 +668,13 @@
                             display: inline-block;
                             margin: 10px 0 0 5px;
                         }
-                        #main-newstand-animation {
+                        #main-newstand-animation,
+                        #main-shopping-animation {
                             padding-left: 25px;
                             position: relative;
                         }
-                        #main-newstand-animation::before {
+                        #main-newstand-animation::before,
+                        #main-shopping-animation::before {
                             content: "";
                             display: block;
                             position: absolute;
@@ -672,10 +685,12 @@
                             width: 1px;
                             height: 12px;
                         }
-                        #main-newstand-animation  a:first-of-type {
+                        #main-newstand-animation  a:first-of-type,
+                        #main-shopping-animation  a:first-of-type {
                             vertical-align: 5px;
                         }
-                        #main-newstand-animation  a:first-of-type::after {
+                        #main-newstand-animation  a:first-of-type::after,
+                        #main-shopping-animation  a:first-of-type::after {
                             content: "";
                             display: inline-block;
                             width: 3px;
@@ -685,23 +700,28 @@
                             margin: 12px 6px 0 6px;
                             border-radius: 50%;
                         }
-                        #main-newstand-animation a:last-of-type {
+                        #main-newstand-animation a:last-of-type,
+                        #main-shopping-animation a:last-of-type {
                             text-overflow: ellipsis;
                             width: 450px;
                             white-space: nowrap;
                             display: inline-block;
                             overflow: hidden;
                         }
-                        #main-newstand a {
+                        #main-newstand a,
+                        #main-shopping a {
                             text-decoration: none;
                         }
-                        #main-newstand a:visited {
+                        #main-newstand a:visited,
+                        #main-shopping a:visited {
                             color: inherit;
                         }
-                        #main-newstand a:hover {
+                        #main-newstand a:hover,
+                        #main-shopping a:hover {
                             text-decoration: underline;
                         }
-                        #main-newstand-grid {
+                        #main-newstand-grid,
+                        #main-shopping-grid {
                             display: grid;
                             height: 224px;
                             grid-template-rows: repeat(4, 1fr);;
@@ -715,14 +735,16 @@
                             grid-gap: 1px;
                             background: var(--color_border_in);
                         }
-                        #main-newstand-grid > div {
+                        #main-newstand-grid > div,
+                        #main-shopping-grid > div {
                             height: 100%;
                             background: white;
                             display: flex;
                             justify-content: center;
                             align-items: center;
                         }
-                        #main-newstand footer {
+                        #main-newstand footer,
+                        #main-shopping footer {
                             border-top: 1px solid var(--color_border_in);
                             padding: 10px 0 11px;
                             font-size: 0.8rem;
@@ -734,18 +756,21 @@
                             justify-content: center;
                             position: relative;
                         }
-                        #main-newstand footer .list, #main-newstand footer .grid {
+                        #main-newstand footer .list, #main-newstand footer .grid,
+                        #main-shopping footer .list, #main-shopping footer .grid {
                             position: absolute;
                             border: none;
                             cursor: pointer;
                             top: 0;
                             background: none;
                         }
-                        #main-newstand footer .list {
+                        #main-newstand footer .list,
+                        #main-shopping footer .list {
                             right: 49px;
                             padding: 18px 9px 18px 20px;
                         }
-                        #main-newstand footer .list::before {
+                        #main-newstand footer .list::before,
+                        #main-shopping footer .list::before {
                             content: "";
                             display: inline-block;
                             background: url(./sp_main.png);
@@ -755,11 +780,13 @@
                             width: 20px;
                             height: 20px;
                         }
-                        #main-newstand footer .grid {
+                        #main-newstand footer .grid,
+                        #main-shopping footer .grid {
                             right: 0;
                             padding: 18px 20px 18px 9px;
                         }
-                        #main-newstand footer .grid::before {
+                        #main-newstand footer .grid::before,
+                        #main-shopping footer .grid::before {
                             content: "";
                             display: inline-block;
                             background: url(./sp_main.png);
@@ -769,7 +796,8 @@
                             width: 20px;
                             height: 20px;
                         }
-                        #main-newstand footer .news {
+                        #main-newstand footer .news,
+                        #main-shopping footer .news {
                             color: var(--color_news);
                         }
                     </style>
@@ -831,7 +859,61 @@
                             <button class="grid"><span class="blind">격자보기</span></button>
                         </footer>
                     </section>
-                    <section id="main-shopping"></section>
+                    <section id="main-shopping">
+                        <div id="main-shopping-top">
+                            <header>
+                                <a href="">쇼핑</a>
+                                <a href="" class="slash">맨즈</a>
+                                <a href="" class="slash">원쁠딜</a>
+                                <a href="" class="slash">쇼핑라이브</a>
+                            </header>
+                            <div id="main-shopping-gray">
+                                <div class="left">
+                                    <a href="">오늘의혜택</a>
+                                    <div id="main-shopping-animation">
+                                        <a href="">[뉴스제목 titletitletitletitletitletitletitletitletitletitletitletitle]</a>
+                                    </div>
+                                </div>
+                                <div class="left">
+                                    <span>1</span>
+                                    <span>/18</span>
+                                    <button><div class="blind">이전 페이지</div></button>
+                                    <button><div class="blind">다음 페이지</div></button>
+                                </div>
+                            </div>
+                            <div id="main-shopping-grid">
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                                <div>언론사</div>
+                            </div>
+                        </div>
+                        <footer>
+                            <button class="prev"><span class="blind">이전 페이지</span></button>
+                            <div class="text"><span class="news">쇼핑핫아이템</span> 더보기1/58</div>
+                            <button class="next"><span class="blind">다음 페이지</span></button>
+                        </footer>
+                    </section>
                 </div>
                 <div id="main-right">
                     <section id="main-login">
