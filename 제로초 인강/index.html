@@ -261,12 +261,108 @@
             width: 25px;
             height: 25px;
         }
+        
+        /* nav 스타일 */
+        #nav {
+            margin-top: 12px;
+        }
+        #nav > ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            font-size: 0.9rem;
+            line-height: 20px;
+        }
+        #nav > ul > li {
+            width: 64px;
+            margin-left: 4px;
+            display: flex;
+            justify-content: center;
+        }
+        #nav > ul > li:nth-of-type(1) {
+            margin-left: 0;
+        }
+        #nav > ul > li > a {
+            text-decoration: none;
+        }
+        #nav > ul > li > a:visited {
+            color: black;
+        }
+        #nav > ul > li > a > div {
+            margin: 0 auto;
+            position: relative;
+            text-align: center;
+        }
+        #nav > ul > li > a > div::after {
+            content: "";
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.fdc455b9.png);
+            background-size: 422px 405px;
+            background-repeat: no-repeat;
+            width: 44px;
+            height: 44px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            margin: 2px;
+        }
+        #nav > ul > li > a > div::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -2px;
+            left: -3px;
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.fdc455b9.png);
+            background-size: 422px 405px;
+            background-position: 0px -128px;
+            background-repeat: no-repeat;
+            width: 54px;
+            height: 54px;
+        }
+        #nav > ul > li:nth-of-type(1) > a > div::after {
+            background-position: -250px -90px;
+        }
+        #nav > ul > li:nth-of-type(2) > a > div::after {
+            background-position: -250px 0px;
+        }
+        #nav > ul > li:nth-of-type(3) > a > div::after {
+            background-position: -201px -98px;
+        }
+        #nav > ul > li:nth-of-type(4) > a > div::after {
+            background-position: -90px -209px;
+        }
+        #nav > ul > li:nth-of-type(5) > a > div::after {
+            background-position: 0px -209px;
+        }
+        #nav > ul > li:nth-of-type(6) > a > div::after {
+            background-position: -180px -209px;
+        }
+        #nav > ul > li:nth-of-type(7) > a > div::after {
+            background-position: -45px -209px;
+        }
+        #nav > ul > li:nth-of-type(8) > a > div::after {
+            background-position: -201px 0px;
+            width: 48px;
+            height: 48px;
+        }
+        #nav > ul > li:nth-of-type(9) > a > div::after {
+            background-position: -225px -209px;
+        }
+        #nav > ul > li:nth-of-type(10) > a > div::after {
+            background-position: -250px -135px;
+        }
+        #nav > ul > li > a > span {
+            margin-top: 4px;
+            display: inline-block;
+        }
+        #nav > ul > li:nth-of-type(8) > a > span {
+            margin-top: 1px;
+        }
     </style>
 </head>
 <body>
     <div id="wrap">
         <div id="wrap-center">
-            <div id="header">
+            <header id="header">
                 <button id="header-hamburger">
                     <div></div>
                     <span class="blind">확장 영역</span>
@@ -279,7 +375,7 @@
                     <div></div>
                     <span class="blind">알림</span>
                 </button>
-            </div>
+            </header>
             <div id="search">
                 <form action="" method="">
                     <a href="#" id="search-avg">
@@ -303,107 +399,7 @@
                     </div>
                 </form>
             </div>
-
-
-            <style>
-                /* nav 스타일 */
-                #nav {
-                    margin-top: 12px;
-                }
-                #nav > ul {
-                    display: flex;
-                    list-style: none;
-                    justify-content: center;
-                    font-size: 0.9rem;
-                    line-height: 20px;
-                }
-                #nav > ul > li {
-                    width: 64px;
-                    margin-left: 4px;
-                    display: flex;
-                    justify-content: center;
-                }
-                #nav > ul > li:nth-of-type(1) {
-                    margin-left: 0;
-                }
-                #nav > ul > li > a {
-                    text-decoration: none;
-                }
-                #nav > ul > li > a:visited {
-                    color: black;
-                }
-                #nav > ul > li > a > div {
-                    margin: 0 auto;
-                    position: relative;
-                    text-align: center;
-                }
-                #nav > ul > li > a > div::after {
-                    content: "";
-                    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.fdc455b9.png);
-                    background-size: 422px 405px;
-                    background-repeat: no-repeat;
-                    width: 44px;
-                    height: 44px;
-                    display: inline-block;
-                    position: relative;
-                    z-index: 1;
-                    margin: 2px;
-                }
-                #nav > ul > li > a > div::before {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    top: -2px;
-                    left: -3px;
-                    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.fdc455b9.png);
-                    background-size: 422px 405px;
-                    background-position: 0px -128px;
-                    background-repeat: no-repeat;
-                    width: 54px;
-                    height: 54px;
-                }
-                #nav > ul > li:nth-of-type(1) > a > div::after {
-                    background-position: -250px -90px;
-                }
-                #nav > ul > li:nth-of-type(2) > a > div::after {
-                    background-position: -250px 0px;
-                }
-                #nav > ul > li:nth-of-type(3) > a > div::after {
-                    background-position: -201px -98px;
-                }
-                #nav > ul > li:nth-of-type(4) > a > div::after {
-                    background-position: -90px -209px;
-                }
-                #nav > ul > li:nth-of-type(5) > a > div::after {
-                    background-position: 0px -209px;
-                }
-                #nav > ul > li:nth-of-type(6) > a > div::after {
-                    background-position: -180px -209px;
-                }
-                #nav > ul > li:nth-of-type(7) > a > div::after {
-                    background-position: -45px -209px;
-                }
-                #nav > ul > li:nth-of-type(8) > a > div::after {
-                    background-position: -201px 0px;
-                    width: 48px;
-                    height: 48px;
-                }
-                #nav > ul > li:nth-of-type(9) > a > div::after {
-                    background-position: -225px -209px;
-                }
-                #nav > ul > li:nth-of-type(10) > a > div::after {
-                    background-position: -250px -135px;
-                }
-                #nav > ul > li > a > span {
-                    margin-top: 4px;
-                    display: inline-block;
-                }
-                #nav > ul > li:nth-of-type(8) > a > span {
-                    margin-top: 1px;
-                }
-            </style>
-
-            <div id="nav">
+            <nav id="nav">
                 <ul>
                     <li>
                         <a href="">
@@ -469,10 +465,83 @@
                         </a>
                     </li>
                 </ul>
-            </div>
+            </nav>
 
 
-            <div id="main"></div>
+            <style>
+                #main {
+                    margin-top: 51px;
+                    display: flex;
+                }
+                #main-left {
+                    width: 830px;
+                    margin-right: 30px;
+                }
+                #main-right {
+                    width: 420px;
+                }
+                #main > div > aside {
+                    background: gray;
+                    border-radius: 8px;
+                    margin-bottom: 16px;
+                }
+                #main > div > section {
+                    box-shadow: 0 0 0 1px #e2e4e8, 0 1px 2px 0 rgba(0,0,0,.04);
+                    border-radius: 8px;
+                    margin-bottom: 16px;
+                }
+                #main-newstand {
+                    height: 426px;
+                }
+                #main-left-ad {
+                    height: 130px;
+                }
+                #main-shopping {
+                    height: 560px;
+                }
+                #main-login {
+                    height: 164px;
+                }
+                #main-right-ad {
+                    height: 240px;
+                }
+                .main-weather-and-stock {
+                    padding: 0 18px;
+                }
+                .main-weather-and-stock > header {
+                    height: 52px;
+                    padding: 6px 0;
+                }
+                .main-weather-and-stock > div {
+                    border-top: 1px solid var(--color_border_in);
+                }
+                #main-weather {
+                    height: 236px;
+                }
+                #main-stock {
+                    height: 236px;
+                }
+            </style>
+
+            <main id="main">
+                <div id="main-left">
+                    <aside id="main-left-ad"></aside>
+                    <section id="main-newstand"></section>
+                    <section id="main-shopping"></section>
+                </div>
+                <div id="main-right">
+                    <section id="main-login"></section>
+                    <aside id="main-right-ad"></aside>
+                    <section id="main-weather" class="main-weather-and-stock">
+                        <header>날씨</header>
+                        <div></div>
+                    </section>
+                    <section id="main-stock" class="main-weather-and-stock">
+                        <header>증시</header>
+                        <div></div>
+                    </section>
+                </div>
+            </main>
         </div>
     </div>
 </body>
