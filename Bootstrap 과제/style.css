@@ -1,0 +1,49 @@
+.grid_img_size {
+    padding: 10px;
+    aspect-ratio: 3 / 2;
+}
+.align-center {
+    margin: 0 auto;
+}
+#highlights > div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+#highlights > div > div {
+    width: 250px;
+    height: 200px;
+}
+#highlights > div > div > i {
+    margin: 60px 0  40px 0;
+}
+#introduction, #intro, #highlights, #gallary, #contact {
+    padding: 150px 0;
+}
+#contact > div:nth-of-type(1), footer {
+    display: flex;
+    justify-content: space-between;
+}
+#contact > div > input {
+    width: 31%;
+}
+#contact > textarea {
+    height: 250px;
+    margin: 15px 0 40px 0;
+}
+.p-3-10 {
+    padding: 30px 100px;
+}
+.w-33 {
+    width: 33%;
+}
+@media screen and (max-width: 768px) { /* screen의 width가 768px 이하일 때 적용 */
+	#highlights > div,
+    #contact > div:nth-of-type(1),
+    footer {
+        flex-direction: column;
+    }
+    #contact > div > input {
+        width: 100%;
+    }
+}

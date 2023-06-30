@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand text-white" href="#">Pirogramming</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header-navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,56 +35,201 @@
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <button class="btn btn-outline-success" type="submit" data-bs-toggle="modal" data-bs-target="#header-modal">About</button>
-                        <!-- Modal -->
-                        <div class="modal" id="header-modal">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title">피로그래밍 19기</h5>
-                                    </div>
-                                    <div class="modal-body">
-                                        <h1>파이팅!</h1>
-                                        <p>모두들 첫 과제 하느라 수고많으셨습니다!<br>
-                                            힘들더라도 계속해서 달려봐요!
-                                        </p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <a href="#" class="text-decoration-none">Download</a>
-                                        <button type="button" class="btn btn-info" data-bs-dismiss="modal">Ok</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Modal -->
+                        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#header-modal">About</button>
+                        
                     </form>
                 </div>
             </div>
         </nav>
-
+        <!-- Modal -->
+        <div class="modal" id="header-modal">
+            <div class="modal-dialog">
+                <div class="modal-content text-center bg-secondary text-white">
+                    <div class="modal-header justify-content-center">
+                        <h5 class="modal-title fw-bold">피로그래밍 19기</h5>
+                    </div>
+                    <div class="modal-body">
+                        <h1>파이팅!</h1>
+                        <p>
+                            모두들 첫 과제 하느라 수고많으셨습니다!<br>
+                            힘들더라도 계속해서 달려봐요!
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="text-decoration-none">Download</a>
+                        <button type="button" class="btn btn-info" data-bs-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
 
     </header>
-    <div>
-        <div id="introduction">
-
+    <div id="main">
+        <div id="introduction" class="w-75 align-center text-center">
+            <h1 class="fw-bold">Pirogramming 19</h1>
+            <h6 class="fw-bold mb-4">cheer up</h6>
+            <hr>
+            <a href="#intro" class="btn btn-primary">Get Started!</a>
         </div>
-        <div id="intro">
-
-        </div>
-        <div id="highlights">
-
-        </div>
-        <div id="gallary">
-
-        </div>
-        <div id="contact">
-
+        <div class="bg-secondary">
+            <div class="w-75 align-center text-center">
+                <div id="intro">
+                    <h1 class="text-danger fw-bold">Built On the Bootstrap Grid</h1>
+                    <p class="text-white">
+                        Bootstrap's responsive grid comes in 4sizes or 'breakpoints': tiny(x),<br>
+                        small(sm), medium(md) and large(lg). These 4 grid cites enables you<br>
+                        create responsive layouts that behave accordingly on different sizes
+                    </p>
+                    <a href="#highlights" class="btn btn-light">Learn more</a>
+                </div>
+                <div id="highlights">
+                    <h1 class="text-primary fw-bold">Flexible Layouts</h1>
+                    <hr>
+                    <div class="text-white">
+                        <div>
+                            <i class="fa-solid fa-house fa-2xl" style="color: #ffffff;"></i>
+                            <h5>Responsive</h5>
+                            <h6>Your site looks good everywhere</h6>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #ffffff;"></i>
+                            <h5>Customizable</h5>
+                            <h6>Easy to theme and customize with SASS</h6>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-user fa-2xl" style="color: #ffffff;"></i>
+                            <h5>Consistent</h5>
+                            <h6>A mature, well-tested, stable codebase</h6>
+                        </div>
+                    </div>
+                </div>
+                <div id="gallary">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6 col-12 grid_img_size">
+                            <img src="./grid_img/grid_img1.jpg" class="w-100 h-100" alt="grid_img_1">
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-12 grid_img_size">
+                            <img src="./grid_img/grid_img2.jpg" class="w-100 h-100" alt="grid_img_2">
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-12 grid_img_size">
+                            <img src="./grid_img/grid_img3.jpg" class="w-100 h-100" alt="grid_img_3">
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-12 grid_img_size">
+                            <img src="./grid_img/grid_img4.jpg" class="w-100 h-100" alt="grid_img_4" >
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-12 grid_img_size">
+                            <img src="./grid_img/grid_img5.jpg" class="w-100 h-100" alt="grid_img_5">
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-12 grid_img_size">
+                            <img src="./grid_img/grid_img6.jpg" class="w-100 h-100" alt="grid_img_6">
+                        </div>
+                    </div>
+                </div>
+                <div id="contact">
+                    <h1 class="text-primary fw-bold">Get in Touch</h1>
+                    <hr class="mt-4 mb-5">
+                    <div>
+                        <input type="text" class="rounded-3 px-2" placeholder="name">
+                        <input type="email" class="rounded-3 px-2" placeholder="email">
+                        <input type="text" class="rounded-3 px-2" placeholder="phone">
+                    </div>
+                    <textarea class="w-100 rounded-3 px-2 py-3" placeholder="Your messages here"></textarea>
+                    <button class="btn btn-primary w-25" data-bs-toggle="modal" data-bs-target="#main-contact-modal">Send</button>
+                    <!-- Modal -->
+                    <div class="modal" id="main-contact-modal">
+                        <div class="modal-dialog">
+                            <div class="modal-content text-center">
+                                <div class="modal-header justify-content-center">
+                                    <h5 class="modal-title fw-bold">Nice-Job!</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        You clicked the button but it doesn't<br>
+                                        actually go anywhere
+                                    </p>
+                                    <p>
+                                        Learn more at Bootstrap
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">Ok</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                </div>
+            </div>
         </div>
     </div>
-    <footer>
-
+    <footer class="bg-dark p-3-10">
+        <div class="w-33">
+            <h6 class="text-info">Information</h6>
+            <ul class="list-unstyled mb-0">
+                <li>
+                    <a href="#" class="text-white text-decoration-none">Product</a>
+                </li>
+                <li>
+                    <a href="#" class="text-white text-decoration-none">Services</a>
+                </li>
+                <li>
+                    <a href="#" class="text-white text-decoration-none">Benefits</a>
+                </li>
+                <li>
+                    <a href="#" class="text-white text-decoration-none">Developer</a>
+                </li>
+            </ul>
+        </div>
+        <div class="w-33">
+            <h6 class="text-info">About</h5>
+            <ul class="list-unstyled">
+                <li>
+                    <a href="#" class="text-white text-decoration-none">Contact us</a>
+                </li>
+                <li>
+                    <a href="#" class="text-white text-decoration-none">Delevery Information</a>
+                </li>
+                <li>
+                    <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#" class="text-white text-decoration-none">Trauma&Condition</a>
+                </li>
+            </ul>
+        </div>
+        <div class="w-33">
+            <h6 class="text-info mb-3">Stay Posted</h6>
+            <form action="">
+                <input type="email" class="w-100 p-1 mb-1 rounded-3" placeholder="Tell me your email">
+                <input type="submit" class="btn btn-primary" value="Subscribe for updates" data-bs-toggle="modal" data-bs-target="#footer-modal">
+                <!-- Modal -->
+                <div class="modal" id="footer-modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content text-center">
+                            <div class="modal-header justify-content-center">
+                                <h5 class="modal-title fw-bold">Nice-Job!</h5>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    You clicked the button but it doesn't<br>
+                                    actually go anywhere
+                                </p>
+                                <p>
+                                    Learn more at Bootstrap
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+            </form>
+        </div>
     </footer>
-
+    <script src="https://kit.fontawesome.com/6fbcf91afd.js" crossorigin="anonymous"></script>
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
