@@ -1,0 +1,70 @@
+@import "./reset.css";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    margin: 0;
+}
+
+#stopwatch {
+    width: 380px;
+    padding: 40px 30px 25px 30px;
+    margin: 10px 0 30px 0;
+    background-color: #c1cec2;
+    box-shadow: 3px 3px 10px gray;
+    border-radius: 30px;
+}
+#stopwatch-time {
+    margin-bottom: 20px;
+    padding: 10px 0;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 50px;
+}
+#stopwatch-btns {
+    display: flex;
+    justify-content: center;
+}
+#stopwatch-btns > button {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 1px 1px 5px gray;
+    font-size: 15px;
+}
+#stopwatch-btns > button:active {
+    cursor: pointer;
+}
+
+#record {
+    display: grid;
+}
+#std-row, .row {
+    display: grid;
+    grid-template-columns: 50px 350px 50px;
+    align-items: center;
+    padding: 10px;
+}
+#std-row {
+    background-color: #c1cec2;
+    border-radius: 20px 20px 0 0;
+}
+#std-row > i:active {
+    color: red;
+    cursor: pointer;
+}
+#all-chbx, .chbx {
+    height: 25px;
+}

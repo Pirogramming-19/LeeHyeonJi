@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stopwatch</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h2>
+        <i class="fa-solid fa-stopwatch"></i>
+        피로그래밍 스톱워치
+    </h2>
+    <div id="stopwatch">
+        <div id="stopwatch-time">
+            <span id="sec">00</span>:<span id="millisec">00</span>
+        </div>
+        <div id="stopwatch-btns">
+            <button id="start-btn">start</button>
+            <button id="stop-btn">stop</button>
+            <button id="reset-btn">reset</button>
+        </div>
+    </div>
+    <div id="record">
+        <div id="std-row">
+            <input type="checkbox" id="all-chbx">
+            <h2>구간 기록</h2>
+            <i id="trash" class="fa-solid fa-trash fa-xl"></i>
+        </div>
+        <!-- 노드 추가 예시 -->
+        <!-- <div class="row">
+            <input type="checkbox" class="chbx" onclick="chbx()">
+            <h2>00:00</h2>
+        </div> -->
+    </div>
+    <script src="https://kit.fontawesome.com/6fbcf91afd.js" crossorigin="anonymous"></script>
+    <script src="./stopwatch.js"></script>
+</body>
+</html>
