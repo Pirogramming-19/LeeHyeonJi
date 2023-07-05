@@ -1,0 +1,54 @@
+@import "./reset.css";
+
+body {
+    background-color: #394450;
+}
+
+#main {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#btns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#btns button, #btns img, #clothes img {
+    width: 75px;
+    height: 50px;
+}
+#btns > button:nth-of-type(1),
+#btns > button:nth-of-type(2),
+#btns > button:nth-of-type(3) {
+    border: 0;
+    border-radius: 5px;
+    font-size: 17px;
+}
+#btns > button:nth-of-type(1) {
+    background: #3498DB;
+}
+#btns > button:nth-of-type(2) {
+    background: gold;
+}
+#btns > button:nth-of-type(3) {
+    background: lightcoral;
+}
+
+#clothes {
+    height: 815px;
+    overflow: auto;
+}
+#clothes > div {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+#clothes > div > img {
+    margin-right: 20px;
+}
