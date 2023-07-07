@@ -13,6 +13,7 @@ while True:
         num+=1
         print('playerA :', num)
         if num == 31: #게임 종료
+            print('playerB win!')
             exit()
 
     while True:
@@ -28,4 +29,5 @@ while True:
         num+=1
         print('playerB :', num)
         if num == 31: #게임 종료
+            print('playerA win!')
             exit()
