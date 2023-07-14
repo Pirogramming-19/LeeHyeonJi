@@ -1,0 +1,13 @@
+<a href="/review/{{ review.id }}/update/">수정</a>
+<a href="/review/{{ review.id }}/delete/">삭제</a>
+
+<h2>{{ review.title }}</h2>
+<ul>
+    <li>개봉년도 {{ review.release_year }}년</li>
+    <li>감독 {{ review.director }}</li>
+    <li>주연 {{ review.lead }}</li>
+    <li>장르 {{ review.genre }}</li>
+    <li>별점 {{ review.rate }}</li>
+    <li>러닝타임 {{ review.running_time }}</li>
+</ul>
+<p>{{ review.content }}</p>
