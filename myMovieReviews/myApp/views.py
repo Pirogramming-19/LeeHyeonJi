@@ -8,7 +8,9 @@ def review_list(request):
 
 def review_detail(request, pk):
     review = Review.objects.get(id = pk)
-    return render(request, 'myApp/review_detail.html', {'review':review})
+    time = review.running_time
+    return render(request, 'myApp/review_detail.html', 
+                {'review':review, 'running_hour':time//60, 'running_min':time%60})
 
 def review_delete(request: HttpRequest, pk):
     if request.method == 'POST':
