@@ -1,6 +1,11 @@
 {% extends 'myApp/base.html' %}
 
 {% block content %}
+    <div class="order_std">
+        <a href="/1/">제목이름순</a>|
+        <a href="/2/">별점순</a>|
+        <a href="/3/">상영시간순</a>
+    </div>
     <div class="list_container">
         {% for review in reviews %}
             <div>

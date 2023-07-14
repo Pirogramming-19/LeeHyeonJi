@@ -49,3 +49,13 @@ def review_update(request: HttpRequest, pk):
         return redirect(f'/review/{review.id}/')
 
     return render(request, 'myApp/review_update.html', {'review':review})
+
+def review_order(request, pk):
+    if pk == 1:
+        reviews = Review.objects.order_by('title')
+    elif pk == 2:
+        reviews = Review.objects.order_by('rate')
+    elif pk == 3:
+        reviews = Review.objects.order_by('running_time')
+
+    return render(request, 'myApp/review_list.html', {'reviews':reviews})

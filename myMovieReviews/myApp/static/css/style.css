@@ -31,6 +31,10 @@ hr {
 }
 
 /* 리뷰 전체 페이지 */
+.order_std {
+    text-align: center;
+    margin-top: 20px;
+}
 .list_container {
     display: grid;
     grid-template-columns: repeat(4, 200px);
