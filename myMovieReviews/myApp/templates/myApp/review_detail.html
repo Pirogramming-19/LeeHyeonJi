@@ -1,8 +1,14 @@
 {% extends 'myApp/base.html' %}
 
 {% block content %}
-    <a href="/review/{{ review.id }}/update/">수정</a>
-    <a href="/review/{{ review.id }}/delete/">삭제</a>
+    <form action="/review/{{ review.id }}/update/" method="post">
+        {% csrf_token %}
+        <input type="submit" value="수정">
+    </form>
+    <form action="/review/{{ review.id }}/delete/" method="post">
+        {% csrf_token %}
+        <input type="submit" value="삭제">
+    </form>
 
     <h2>{{ review.title }}</h2>
     <ul>

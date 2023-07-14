@@ -4,4 +4,5 @@ from .views import *
 urlpatterns = [
     path('', review_list),
     path('review/<int:pk>/', review_detail),
+    path('review/<int:pk>/delete/', review_delete),
 ]
