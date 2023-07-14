@@ -1,0 +1,55 @@
+{% extends 'myApp/base.html' %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <h2>Movie review 🌭</h2>
+        <hr>
+        <div>
+            <label for="title">제목:</label>
+            <input type="text" name="title" id="title">
+        </div>
+        <div>
+            <label for="release_year">개봉년도:</label>
+            <input type="text" name="release_year" id="release_year">
+        </div>
+        <div>
+            <label for="genre">장르:</label>
+            <select name="genre" id="genre">
+                <option value="action">---------</option>
+                <option value="action">Action</option>
+                <option value="crime">Crime</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="SF">SF</option>
+                <option value="horror">Horror</option>
+                <option value="mystery">Mystery</option>
+                <option value="comedy">Comedy</option>
+                <option value="romance">Romance</option>
+                <option value="drama">Drama</option>
+                <option value="animation">Animation</option>
+            </select>
+        </div>
+        <div>
+            <label for="rate">별점:</label>
+            <input type="text" name="rate" id="rate">
+        </div>
+        <div>
+            <label for="running_time">러닝타임:</label>
+            <input type="text" name="running_time" id="running_time">
+        </div>
+        <div>
+            <label for="content">리뷰:</label>
+            <br>
+            <textarea name="content" id="content" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <label for="director">감독:</label>
+            <input type="text" name="director" id="director">
+        </div>
+        <div>
+            <label for="lead">배우:</label>
+            <input type="text" name="lead" id="lead">
+        </div>
+        <input type="submit" value="Save">
+    </form>
+{% endblock %}

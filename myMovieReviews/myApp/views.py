@@ -15,3 +15,18 @@ def review_delete(request: HttpRequest, pk):
         review = Review.objects.get(id = pk)
         review.delete()
     return redirect('/')
+
+def review_create(request: HttpRequest):
+    if request.method == 'POST':
+        Review.objects.create(
+            title = request.POST['title'],
+            release_year = request.POST['release_year'],
+            genre = request.POST['genre'],
+            rate = request.POST['rate'],
+            running_time = request.POST['running_time'],
+            content = request.POST['content'],
+            director = request.POST['director'],
+            lead = request.POST['lead'],
+        )
+        return redirect('/')
+    return render(request, 'myApp/review_create.html')
