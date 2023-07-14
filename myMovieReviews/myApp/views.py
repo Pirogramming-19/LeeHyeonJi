@@ -32,3 +32,20 @@ def review_create(request: HttpRequest):
         )
         return redirect('/')
     return render(request, 'myApp/review_create.html')
+
+def review_update(request: HttpRequest, pk):
+    review = Review.objects.get(id = pk)
+
+    if request.method == 'POST':
+        review.title = request.POST['title']
+        review.release_year = request.POST['release_year']
+        review.genre = request.POST['genre']
+        review.rate = request.POST['rate']
+        review.running_time = request.POST['running_time']
+        review.content = request.POST['content']
+        review.director = request.POST['director']
+        review.lead = request.POST['lead']
+        review.save()
+        return redirect(f'/review/{review.id}/')
+
+    return render(request, 'myApp/review_update.html', {'review':review})
