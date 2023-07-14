@@ -1,20 +1,25 @@
 {% extends 'myApp/base.html' %}
 
 {% block content %}
-    <a href="/review/{{ review.id }}/update/">수정</a>
-    <form action="/review/{{ review.id }}/delete/" method="post">
-        {% csrf_token %}
-        <input type="submit" value="삭제">
-    </form>
-
-    <h2>{{ review.title }}</h2>
-    <ul>
-        <li>개봉년도 {{ review.release_year }}년</li>
-        <li>감독 {{ review.director }}</li>
-        <li>주연 {{ review.lead }}</li>
-        <li>장르 {{ review.genre }}</li>
-        <li>별점 {{ review.rate }}</li>
-        <li>러닝타임 {{ running_hour }}시간 {{ running_min }}분</li>
-    </ul>
-    <p>{{ review.content }}</p>
+    <div class="detail_content">
+        <div>
+            <h2>{{ review.title }}</h2>
+            <div>
+                <a href="/review/{{ review.id }}/update/">수정</a>
+                <form action="/review/{{ review.id }}/delete/" method="post" class="delete_btn_form">
+                    {% csrf_token %}
+                    <input type="submit" value="삭제">
+                </form>
+            </div>
+        </div>
+        <ul>
+            <li><span>개봉년도</span> {{ review.release_year }}년</li>
+            <li><span>감독</span> {{ review.director }}</li>
+            <li><span>주연</span> {{ review.lead }}</li>
+            <li><span>장르</span> {{ review.genre }}</li>
+            <li><span>별점</span> {{ review.rate }}</li>
+            <li><span>러닝타임</span> {{ running_hour }}시간 {{ running_min }}분</li>
+        </ul>
+        <p>{{ review.content }}</p>
+    </div>
 {% endblock %}
