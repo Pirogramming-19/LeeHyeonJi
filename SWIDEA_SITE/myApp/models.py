@@ -11,4 +11,4 @@ class Idea(models.Model):
     image = models.FileField()
     content = models.TextField()
     interest = models.IntegerField()
-    devtool = models.CharField(max_length=20)
+    devtool = models.ForeignKey(Devtool, on_delete=models.CASCADE, related_name='idea')
