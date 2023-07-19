@@ -1,13 +1,14 @@
 from django.shortcuts import render, redirect
-from .models import Idea
+from .models import Idea, Devtool
 from .forms import DevtoolForm
 
 def main(request):
     ideas = Idea.objects.all()
     return render(request, 'myApp/main.html', {'ideas':ideas})
 
-def search_all_devtool():
-    pass
+def search_all_devtool(request):
+    devtools = Devtool.objects.all()
+    return render(request, 'myApp/search_all_devtool.html', {'devtools':devtools})
 
 def search_devtool(request, pk):
     pass
