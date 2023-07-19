@@ -26,5 +26,7 @@ def create_devtool(request):
 def update_devtool():
     pass
 
-def delete_devtool():
-    pass
+def delete_devtool(request, pk):
+    devtool = Devtool.objects.get(id = pk)
+    devtool.delete()
+    return redirect('/devtool/')
