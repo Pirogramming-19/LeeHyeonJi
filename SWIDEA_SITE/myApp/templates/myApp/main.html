@@ -1,0 +1,13 @@
+{% extends 'myApp/base.html' %}
+
+{% block content %}
+    {% for idea in ideas %}
+        <div>
+            <img src="{{ idea.image.url }}" width="150" height="150">
+            <p><a href="/idea/{{ idea.id }}">{{ idea.title }}</a></p>
+            <p>예상 개발 툴 : {{ idea.devtool }}</p>
+            <p>아이디어 관심도: + {{ idea.interest }} -</p>
+            <hr>
+        </div>
+    {% endfor %}
+{% endblock %}
