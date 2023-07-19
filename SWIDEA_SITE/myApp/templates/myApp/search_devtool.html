@@ -1,0 +1,26 @@
+{% extends 'myApp/base.html' %}
+
+{% block content %}
+    <h2>DevTool Detail</h2>
+    <p>개발툴 세부 내용 페이지입니다. 자신이 다룰 수 있는 개발툴에 대한 상세 내용을 확인해 보세요.</p>
+    <div>
+        <div>
+            <h3>{{ devtool.name }}</h3>
+            <p>{{ devtool.kind }}</p>
+            <p>{{ devtool.content }}</p>
+        </div>
+        <div>
+            <h4>만들 수 있는 SW 목록</h4>
+            <ul>
+                {% for idea in ideas %}
+                    <li><a href="/idea/{{ idea.id }}/">{{ idea.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div>
+        <a href="/devtool/{{ devtool.id }}/delete/">삭제</a>
+        <a href="/devtool/">목록</a>
+        <a href="/devtool/{{ devtool.id }}/update/">수정</a>
+    </div>
+{% endblock %}

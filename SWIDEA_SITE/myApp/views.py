@@ -11,7 +11,9 @@ def search_all_devtool(request):
     return render(request, 'myApp/search_all_devtool.html', {'devtools':devtools})
 
 def search_devtool(request, pk):
-    pass
+    devtool = Devtool.objects.get(id = pk)
+    ideas = devtool.idea.all()
+    return render(request, 'myApp/search_devtool.html', {'devtool':devtool, 'ideas':ideas})
 
 def create_devtool(request):
     if request.method == 'POST':
