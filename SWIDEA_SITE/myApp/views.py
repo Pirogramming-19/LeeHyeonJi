@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Idea, Devtool
-from .forms import DevtoolForm
+from .forms import IdeaForm, DevtoolForm
 
 def main(request):
     ideas = Idea.objects.all()
@@ -10,8 +10,15 @@ def search_idea(request, pk):
     idea = Idea.objects.get(id = pk)
     return render(request, 'myApp/search_idea.html', {'idea':idea})
 
-def create_idea():
-    pass
+def create_idea(request):
+    if request.method == 'POST':
+        form = IdeaForm(request.POST, request.FILES)
+        if form.is_valid():
+            idea = form.save()
+            return redirect('search_idea', pk = idea.id)
+    else:
+        form = IdeaForm()
+    return render(request, 'myApp/create_idea.html', {'form':form})
 
 def update_idea():
     pass
@@ -34,8 +41,8 @@ def create_devtool(request):
     if request.method == 'POST':
         form = DevtoolForm(request.POST)
         if form.is_valid():
-            idea = form.save()
-            return redirect('search_devtool', pk = idea.id)
+            devtool = form.save()
+            return redirect('search_devtool', pk = devtool.id)
     else:
         form = DevtoolForm()
     return render(request, 'myApp/create_devtool.html', {'form':form})
@@ -45,8 +52,8 @@ def update_devtool(request, pk):
     if request.method == 'POST':
         form = DevtoolForm(request.POST, instance=devtool)
         if form.is_valid():
-            idea = form.save()
-            return redirect('search_devtool', pk = idea.id)
+            devtool = form.save()
+            return redirect('search_devtool', pk = devtool.id)
     else:
         form = DevtoolForm(instance=devtool)
     return render(request, 'myApp/update_devtool.html', {'form':form})
