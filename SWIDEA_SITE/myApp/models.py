@@ -15,3 +15,9 @@ class Idea(models.Model):
     content = models.TextField()
     interest = models.IntegerField()
     devtool = models.ForeignKey(Devtool, on_delete=models.CASCADE, related_name='idea')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+class IdeaStar(models.Model):
+    idea = models.ForeignKey(Idea, on_delete=models.CASCADE, related_name='ideastar')
+    starred_time = models.DateTimeField(auto_now_add=True)
