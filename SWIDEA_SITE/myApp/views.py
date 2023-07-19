@@ -16,8 +16,10 @@ def create_idea():
 def update_idea():
     pass
 
-def delete_idea():
-    pass
+def delete_idea(request, pk):
+    idea = Idea.objects.get(id = pk)
+    idea.delete()
+    return redirect('/')
 
 def search_all_devtool(request):
     devtools = Devtool.objects.all()
