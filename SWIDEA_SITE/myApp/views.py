@@ -3,8 +3,16 @@ from .models import Idea, Devtool, IdeaStar
 from .forms import IdeaForm, DevtoolForm
 
 def main(request):
-    ideas = Idea.objects.all()
-    return render(request, 'myApp/main.html', {'ideas':ideas})
+    ideas = Idea.objects.all() 
+    star_list = []
+    for idea in ideas:
+        ideastars = idea.ideastar.all()
+        if len(ideastars) == 0:
+            star_list.append('☆')
+        else:
+            star_list.append('★')
+    idea_dic = dict(zip(ideas, star_list))
+    return render(request, 'myApp/main.html', {'idea_dic':idea_dic.items()})
 
 def main_interest(request, pk, incdec):
     idea = Idea.objects.get(id = pk)
@@ -27,7 +35,12 @@ def main_starred(request, onoff, pk):
 
 def search_idea(request, pk):
     idea = Idea.objects.get(id = pk)
-    return render(request, 'myApp/search_idea.html', {'idea':idea})
+    ideaStar = IdeaStar.objects.filter(idea = idea)
+    if len(ideaStar) == 0:
+        star = '☆'
+    else:
+        star = '★'
+    return render(request, 'myApp/search_idea.html', {'idea':idea, 'star':star})
 
 def create_idea(request):
     if request.method == 'POST':

@@ -7,3 +7,6 @@
 .star:hover {
     cursor: pointer;
 }
+.detail-star {
+    color: rgb(240, 240, 4);
+}

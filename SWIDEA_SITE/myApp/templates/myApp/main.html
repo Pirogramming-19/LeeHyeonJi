@@ -1,10 +1,10 @@
 {% extends 'myApp/base.html' %}
 
 {% block content %}
-    {% for idea in ideas %}
+    {% for idea, star in idea_dic %}
         <div>
             <img src="{{ idea.image.url }}" width="150" height="150">
-            <span class="star star{{ idea.id }}" id="{{ idea.id }}" onclick="star(this.id)">☆</span>
+            <span class="star star{{ idea.id }}" id="{{ idea.id }}" onclick="star(this.id)">{{ star }}</span>
             <p><a href="/idea/{{ idea.id }}">{{ idea.title }}</a></p>
             <p>예상 개발 툴 : {{ idea.devtool }}</p>
             <p>
