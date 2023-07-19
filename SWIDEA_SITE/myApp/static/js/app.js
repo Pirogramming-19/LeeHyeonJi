@@ -17,3 +17,19 @@ function decrease(num) {
         Http.send();
     }
 }
+
+function star(num) {
+    const star = document.querySelector('.star' + num);
+    if (star.innerText == '☆') {
+        star.innerText = '★';
+        url = 'http://127.0.0.1:8000/idea/staron/' + num + '/';
+    }
+    else if (star.innerText == '★') {
+        star.innerText = '☆';
+        url = 'http://127.0.0.1:8000/idea/staroff/' + num + '/';
+    }
+
+    const Http = new XMLHttpRequest();
+    Http.open('GET', url);
+    Http.send();
+}

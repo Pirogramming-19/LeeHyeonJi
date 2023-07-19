@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Idea, Devtool
+from .models import Idea, Devtool, IdeaStar
 from .forms import IdeaForm, DevtoolForm
 
 def main(request):
@@ -13,6 +13,16 @@ def main_interest(request, pk, incdec):
     elif incdec == 'dec':
         idea.interest -= 1
     idea.save()
+    return redirect('/')
+
+def main_starred(request, onoff, pk):
+    if onoff == 'staron':
+        idea = Idea.objects.get(id = pk)
+        IdeaStar.objects.create(idea = idea)
+    elif onoff == 'staroff':
+        idea = Idea.objects.get(id = pk)
+        ideaStar = IdeaStar.objects.filter(idea = idea)
+        ideaStar.delete()
     return redirect('/')
 
 def search_idea(request, pk):

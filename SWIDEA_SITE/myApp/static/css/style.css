@@ -1,0 +1,9 @@
+.star {
+    position: relative;
+    right: 30px;
+    bottom: 130px;
+    color: yellow;
+}
+.star:hover {
+    cursor: pointer;
+}

@@ -4,6 +4,7 @@
     {% for idea in ideas %}
         <div>
             <img src="{{ idea.image.url }}" width="150" height="150">
+            <span class="star star{{ idea.id }}" id="{{ idea.id }}" onclick="star(this.id)">☆</span>
             <p><a href="/idea/{{ idea.id }}">{{ idea.title }}</a></p>
             <p>예상 개발 툴 : {{ idea.devtool }}</p>
             <p>
