@@ -6,6 +6,15 @@ def main(request):
     ideas = Idea.objects.all()
     return render(request, 'myApp/main.html', {'ideas':ideas})
 
+def main_interest(request, pk, incdec):
+    idea = Idea.objects.get(id = pk)
+    if incdec == 'inc':
+        idea.interest += 1
+    elif incdec == 'dec':
+        idea.interest -= 1
+    idea.save()
+    return redirect('/')
+
 def search_idea(request, pk):
     idea = Idea.objects.get(id = pk)
     return render(request, 'myApp/search_idea.html', {'idea':idea})

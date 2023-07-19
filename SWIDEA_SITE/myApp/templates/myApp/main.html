@@ -6,7 +6,12 @@
             <img src="{{ idea.image.url }}" width="150" height="150">
             <p><a href="/idea/{{ idea.id }}">{{ idea.title }}</a></p>
             <p>예상 개발 툴 : {{ idea.devtool }}</p>
-            <p>아이디어 관심도: + {{ idea.interest }} -</p>
+            <p>
+                아이디어 관심도:
+                <button type="button" id="{{ idea.id }}" onclick="increase(this.id)">+</button>
+                <span id="interest{{ idea.id }}">{{ idea.interest }}</span>
+                <button type="button" id="{{ idea.id }}" onclick="decrease(this.id)">-</button>
+            </p>
             <hr>
         </div>
     {% endfor %}
