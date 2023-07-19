@@ -3,6 +3,10 @@ from .views import *
 
 urlpatterns = [
     path('', main, name="main"),
+    path('idea/<int:pk>/', search_idea, name="search_idea"),
+    path('idea/create/', create_idea, name="create_idea"),
+    path('idea/<int:pk>/update/', update_idea, name="update_idea"),
+    path('idea/<int:pk>/delete/', delete_idea, name="delete_idea"),
     path('devtool/', search_all_devtool, name="search_all_devtool"),
     path('devtool/<int:pk>/', search_devtool, name="search_devtool"),
     path('devtool/create/', create_devtool, name="create_devtool"),

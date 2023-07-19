@@ -6,6 +6,18 @@ def main(request):
     ideas = Idea.objects.all()
     return render(request, 'myApp/main.html', {'ideas':ideas})
 
+def search_idea():
+    pass
+
+def create_idea():
+    pass
+
+def update_idea():
+    pass
+
+def delete_idea():
+    pass
+
 def search_all_devtool(request):
     devtools = Devtool.objects.all()
     return render(request, 'myApp/search_all_devtool.html', {'devtools':devtools})
