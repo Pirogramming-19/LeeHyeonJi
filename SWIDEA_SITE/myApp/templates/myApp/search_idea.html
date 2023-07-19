@@ -1,0 +1,32 @@
+{% extends 'myApp/base.html' %}
+
+{% block content %}
+    <h2>Idea Detail</h2>
+    <p>아이디어 세부 내용 페이지입니다. 당신이 구현하려 한 아이디어들을 자세히 살펴보세요.</p>
+    <div>
+        <img src="{{ idea.image.url }}" width="250" height="250">
+        <h3>{{ idea.title }}</h3>
+        <ol>
+            <li>
+                아이디어 관심도
+                <br>
+                {{ idea.interest }}
+            </li>
+            <li>
+                예상 개발툴
+                <br>
+                <a href="/devtool/{{ idea.devtool.id }}/">{{ idea.devtool.name }}</a>
+            </li>
+            <li>
+                아이디어 설명
+                <br>
+                {{ idea.content }}
+            </li>
+        </ol>
+    </div>
+    <div>
+        <a href="/idea/{{ idea.devtool.id }}/delete/">삭제</a>
+        <a href="/">목록</a>
+        <a href="/idea/{{ idea.devtool.id }}/update/">수정</a>
+    </div>
+{% endblock %}

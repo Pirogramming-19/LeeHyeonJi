@@ -6,8 +6,9 @@ def main(request):
     ideas = Idea.objects.all()
     return render(request, 'myApp/main.html', {'ideas':ideas})
 
-def search_idea():
-    pass
+def search_idea(request, pk):
+    idea = Idea.objects.get(id = pk)
+    return render(request, 'myApp/search_idea.html', {'idea':idea})
 
 def create_idea():
     pass
