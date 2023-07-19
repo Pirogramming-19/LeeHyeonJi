@@ -23,6 +23,15 @@ def main_ordered(request, std):
         ideas = Idea.objects.order_by('-created_at')
     elif std == 'starred':
         ideas = Idea.objects.all()
+        ideas_starred = []
+        ideas_non_starred = []
+        for idea in ideas:
+            ideastars = idea.ideastar.all()
+            if len(ideastars) == 0:
+                ideas_non_starred.append(idea)
+            else:
+                ideas_starred.append(idea)
+        ideas = ideas_starred + ideas_non_starred
 
     star_list = []
     for idea in ideas:
