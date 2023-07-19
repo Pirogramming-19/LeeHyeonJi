@@ -1,6 +1,13 @@
 {% extends 'myApp/base.html' %}
 
 {% block content %}
+    <select name="order_std" id="order_std" onchange="if(this.value) location.href=(this.value);">
+        <option value="">--정렬기준--</option>
+        <option value="/idea/order/title/">이름순</option>
+        <option value="/idea/order/reg/">등록순</option>
+        <option value="/idea/order/latest/">최신순</option>
+        <option value="/idea/order/starred/">찜하기순</option>
+    </select>
     {% for idea, star in idea_dic %}
         <div>
             <img src="{{ idea.image.url }}" width="150" height="150">

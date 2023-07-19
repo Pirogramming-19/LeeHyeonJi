@@ -3,6 +3,7 @@ from .views import *
 
 urlpatterns = [
     path('', main, name="main"),
+    path('idea/order/<str:std>/', main_ordered, name="main_ordered"),
     path('idea/<int:pk>/<str:incdec>/', main_interest, name="main_interest"),
     path('idea/<str:onoff>/<int:pk>/', main_starred, name="main_starred"),
     path('idea/<int:pk>/', search_idea, name="search_idea"),

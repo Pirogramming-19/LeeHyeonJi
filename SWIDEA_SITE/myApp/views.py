@@ -14,6 +14,27 @@ def main(request):
     idea_dic = dict(zip(ideas, star_list))
     return render(request, 'myApp/main.html', {'idea_dic':idea_dic.items()})
 
+def main_ordered(request, std):
+    if std == 'title':
+        ideas = Idea.objects.order_by('title')
+    elif std == 'reg':
+        ideas = Idea.objects.order_by('created_at')
+    elif std == 'latest':
+        ideas = Idea.objects.order_by('-created_at')
+    elif std == 'starred':
+        ideas = Idea.objects.all()
+
+    star_list = []
+    for idea in ideas:
+        ideastars = idea.ideastar.all()
+        if len(ideastars) == 0:
+            star_list.append('☆')
+        else:
+            star_list.append('★')
+    idea_dic = dict(zip(ideas, star_list))
+
+    return render(request, 'myApp/main.html', {'idea_dic':idea_dic.items()})
+
 def main_interest(request, pk, incdec):
     idea = Idea.objects.get(id = pk)
     if incdec == 'inc':
