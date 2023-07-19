@@ -23,8 +23,16 @@ def create_devtool(request):
         form = DevtoolForm()
     return render(request, 'myApp/create_devtool.html', {'form':form})
 
-def update_devtool():
-    pass
+def update_devtool(request, pk):
+    devtool = Devtool.objects.get(id = pk)
+    if request.method == 'POST':
+        form = DevtoolForm(request.POST, instance=devtool)
+        if form.is_valid():
+            idea = form.save()
+            return redirect('search_devtool', pk = idea.id)
+    else:
+        form = DevtoolForm(instance=devtool)
+    return render(request, 'myApp/update_devtool.html', {'form':form})
 
 def delete_devtool(request, pk):
     devtool = Devtool.objects.get(id = pk)
