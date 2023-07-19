@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My SW Ideas Manage</title>
+</head>
+<body>
+    <header>
+        <h1><a href="/">My SW Ideas Manage</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">아이디어 등록</a></li>
+                <li><a href="#">아이디어 관리</a></li>
+                <li><a href="#">개발툴 등록</a></li>
+                <li><a href="#">개발툴 관리</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
