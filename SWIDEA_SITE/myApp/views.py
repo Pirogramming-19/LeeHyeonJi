@@ -20,8 +20,16 @@ def create_idea(request):
         form = IdeaForm()
     return render(request, 'myApp/create_idea.html', {'form':form})
 
-def update_idea():
-    pass
+def update_idea(request, pk):
+    idea = Idea.objects.get(id = pk)
+    if request.method == 'POST':
+        form = IdeaForm(request.POST, request.FILES, instance=idea)
+        if form.is_valid():
+            idea = form.save()
+            return redirect('search_idea', pk = idea.id)
+    else:
+        form = IdeaForm(instance=idea)
+    return render(request, 'myApp/update_idea.html', {'form':form})
 
 def delete_idea(request, pk):
     idea = Idea.objects.get(id = pk)
