@@ -1,5 +1,13 @@
 {% extends 'myApp/base.html' %}
 
 {% block content %}
-hello
+    {% for post in posts %}
+    <div class="post">
+        <div class="content">
+            <p>{{ post.content }}</p>
+            <span class="like post-id-{{ post.id }}" onclick="upAndDownLike({{ post.id }})">♡</span>
+            <span class="post-id-{{ post.id }}-count">{{ post.like }}</span>
+        </div>
+    </div>
+    {% endfor %}
 {% endblock %}

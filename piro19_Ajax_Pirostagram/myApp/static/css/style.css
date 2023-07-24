@@ -1,0 +1,20 @@
+@import './reset.css';
+
+.post {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid black;
+    margin: 30px;
+}
+
+.content {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.like {
+    color: red;
+}
+.like:hover {
+    cursor: pointer;
+}
