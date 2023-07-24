@@ -40,3 +40,7 @@
 .post > button:hover, .xBtn:hover {
     cursor: pointer;
 }
+.xBtn {
+    border: none;
+    background-color: transparent;
+}
