@@ -62,7 +62,7 @@ function makeNodes(post_id, comment, comment_id) {
     buttonTag.setAttribute('type', 'button');
     buttonTag.setAttribute('class', 'xBtn');
     buttonTag.setAttribute('onclick', 'removeComment(' + comment_id + ')');
-    textNode = document.createTextNode('x');
+    textNode = document.createTextNode('삭제');
     buttonTag.appendChild(textNode);
 
     const pTag = document.createElement('p');

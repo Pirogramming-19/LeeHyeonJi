@@ -13,7 +13,7 @@
                 {% if post.id == comment.post.id %}
                     <p class="comment-id-{{ comment.id }}">
                         <span>{{ comment.content }}</span>
-                        <button type="button" class="xBtn" onclick="removeComment({{ comment.id }})">x</button>
+                        <button type="button" class="xBtn" onclick="removeComment({{ comment.id }})">삭제</button>
                     </p>
                 {% endif %}
             {% endfor %}

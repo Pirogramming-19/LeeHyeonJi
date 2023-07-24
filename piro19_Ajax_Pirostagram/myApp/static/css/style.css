@@ -22,7 +22,7 @@
 .comment > p {
     display: flex;
     justify-content: space-between;
-    padding-right: 5px;
+    padding: 2px 5px;
     border-bottom: 1px solid black;
 }
 .post > input {
@@ -42,5 +42,4 @@
 }
 .xBtn {
     border: none;
-    background-color: transparent;
 }
