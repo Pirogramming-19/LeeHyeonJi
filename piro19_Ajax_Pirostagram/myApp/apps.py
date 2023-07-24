@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class PirostagramConfig(AppConfig):
+class MyappConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'pirostagram'
+    name = 'myApp'
