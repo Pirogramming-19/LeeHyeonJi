@@ -46,25 +46,29 @@ function leaveComment(post_id) {
 requestLvComm.onreadystatechange = () => {
     if (requestLvComm.readyState === XMLHttpRequest.DONE) {
         if (requestLvComm.status < 400) {
-            const {post_id, comment} = JSON.parse(requestLvComm.response);
-            makeNodes(post_id, comment);
+            const {post_id, comment, comment_id} = JSON.parse(requestLvComm.response);
+            makeNodes(post_id, comment, comment_id);
             removeNewComment(post_id);
         }
     }
 }
 
-function makeNodes(post_id, comment) {
-    const pTag = document.createElement('p');
-
+function makeNodes(post_id, comment, comment_id) {
     let spanTag = document.createElement('span');
     let textNode = document.createTextNode(comment);
     spanTag.appendChild(textNode);
-    pTag.appendChild(spanTag);
 
-    spanTag = document.createElement('span');
+    buttonTag = document.createElement('button');
+    buttonTag.setAttribute('type', 'button');
+    buttonTag.setAttribute('class', 'xBtn');
+    buttonTag.setAttribute('onclick', 'removeComment(' + comment_id + ')');
     textNode = document.createTextNode('x');
-    spanTag.appendChild(textNode);
+    buttonTag.appendChild(textNode);
+
+    const pTag = document.createElement('p');
+    pTag.setAttribute('class', 'comment-id-' + comment_id);
     pTag.appendChild(spanTag);
+    pTag.appendChild(buttonTag);
 
     const divTag = document.querySelector('.post-id-' + post_id + '-comments');
     divTag.appendChild(pTag);

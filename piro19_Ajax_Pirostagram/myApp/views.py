@@ -34,9 +34,9 @@ def leave_comment_ajax(request):
     comment = reqObj['comment']
 
     post = Post.objects.get(id = post_id)
-    Comment.objects.create(post = post, content = comment)
+    new_comment = Comment.objects.create(post = post, content = comment)
 
-    return JsonResponse({'post_id':post_id, 'comment':comment})
+    return JsonResponse({'post_id':post_id, 'comment':comment, 'comment_id':new_comment.id})
 
 @csrf_exempt
 def remove_comment_ajax(request):
