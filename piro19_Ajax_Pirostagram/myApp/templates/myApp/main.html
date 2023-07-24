@@ -8,6 +8,18 @@
             <span class="like post-id-{{ post.id }}" onclick="upAndDownLike({{ post.id }})">♡</span>
             <span class="post-id-{{ post.id }}-count">{{ post.like }}</span>
         </div>
+        <div class="comment post-id-{{ post.id }}-comments">
+            {% for comment in comments %}
+                {% if post.id == comment.post.id %}
+                    <p class="comment-id-{{ comment.id }}">
+                        <span>{{ comment.content }}</span>
+                        <span class="xBtn" onclick="removeComment({{ comment.id }})">x</span>
+                    </p>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <input type="text" class="post-id-{{ post.id }}-comment">
+        <button type="button" onclick="leaveComment({{ post.id }})">댓글달기</button>
     </div>
     {% endfor %}
 {% endblock %}

@@ -18,3 +18,25 @@
 .like:hover {
     cursor: pointer;
 }
+
+.comment > p {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5px;
+    border-bottom: 1px solid black;
+}
+.post > input {
+    width: 70%;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+.post > button {
+    width: 25%;
+    padding: 5px;
+    border: 1px solid black;
+}
+.post > button:hover, .xBtn:hover {
+    cursor: pointer;
+}

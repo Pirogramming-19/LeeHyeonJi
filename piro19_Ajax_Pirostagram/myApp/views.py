@@ -26,3 +26,24 @@ def like_ajax(request):
     post.save()
 
     return JsonResponse({'post_id':post_id, 'like_cnt':post.like})
+
+@csrf_exempt
+def leave_comment_ajax(request):
+    reqObj = json.loads(request.body)
+    post_id = reqObj['post_id']
+    comment = reqObj['comment']
+
+    post = Post.objects.get(id = post_id)
+    Comment.objects.create(post = post, content = comment)
+
+    return JsonResponse({'post_id':post_id, 'comment':comment})
+
+@csrf_exempt
+def remove_comment_ajax(request):
+    reqObj = json.loads(request.body)
+    comment_id = reqObj['comment_id']
+
+    comment = Comment.objects.get(id = comment_id)
+    comment.delete()
+
+    return JsonResponse({'comment_id':comment_id})
